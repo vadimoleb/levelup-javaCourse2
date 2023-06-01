@@ -7,7 +7,7 @@ import org.levelup.bank.system.repository.JdbcAccountRepository;
 
 import java.util.Collection;
 
-public class AccountListingAction {
+public class AccountListingAction implements ConsoleAction {
 
     private final AccountRepository accountRepository;
 
@@ -15,6 +15,7 @@ public class AccountListingAction {
         this.accountRepository = new JdbcAccountRepository();
     }
 
+    @Override
     public void doAction() {
         // показать список счетов пользователей
         // получить ид пользователя

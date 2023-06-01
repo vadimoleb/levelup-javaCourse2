@@ -5,7 +5,7 @@ import org.levelup.bank.system.menu.ConsoleMenu;
 import org.levelup.bank.system.repository.AccountRepository;
 import org.levelup.bank.system.repository.JdbcAccountRepository;
 
-public class AccountCreationAction {
+public class AccountCreationAction implements ConsoleAction{
 
     private final AccountRepository accountRepository;
 
@@ -13,6 +13,7 @@ public class AccountCreationAction {
         this.accountRepository = new JdbcAccountRepository();
     }
 
+    @Override
     public void doAction() {
         System.out.println("-------------");
         String number = ConsoleMenu.readString("Введите номер счета");
