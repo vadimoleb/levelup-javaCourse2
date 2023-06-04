@@ -9,5 +9,7 @@ public interface AccountRepository {
     Collection<Account> findUserAccounts(long userId);
 
     Account createAccount(String number, String currency, long clientId);
+    Account editAccountNumber(long accountId, String number);
+    Boolean deleteAccount(long accountId, long clientId);
 
 }

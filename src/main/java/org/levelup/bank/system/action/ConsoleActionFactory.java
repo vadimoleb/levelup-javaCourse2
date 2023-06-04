@@ -12,6 +12,8 @@ public class ConsoleActionFactory {
     static {
         CONSOLE_ACTION_MAP.put(1L, new AccountListingAction());
         CONSOLE_ACTION_MAP.put(2L, new AccountCreationAction());
+        CONSOLE_ACTION_MAP.put(3L, new AccountEditNumberAction());
+        CONSOLE_ACTION_MAP.put(4L, new AccountDeleteAction());
     }
 
     private ConsoleActionFactory() {

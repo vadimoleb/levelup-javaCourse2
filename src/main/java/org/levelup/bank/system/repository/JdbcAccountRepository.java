@@ -77,6 +77,73 @@ public class JdbcAccountRepository implements AccountRepository {
         return null;
     }
 
+    @Override
+    public Boolean deleteAccount(long accountId, long clientId){
+        try (Connection conn = jdbcConnectionService.openConnection()) {
+
+            PreparedStatement selectStatement =
+                    conn.prepareStatement("select * from accounts where account_id = ? and  client_id = ?");
+            selectStatement.setLong(1,accountId);
+            selectStatement.setLong(2, clientId);
+            ResultSet resultSet = selectStatement.executeQuery();
+
+            if (!resultSet.next()) {
+                System.out.println("Указанный счет у данного пользователя не найден");
+                return false;
+            }
+
+            PreparedStatement deleteOperationsStatement =
+                    conn.prepareStatement("delete from operations where from_account_id = ? or to_account_id = ?");
+            deleteOperationsStatement.setLong(1,accountId);
+            deleteOperationsStatement.setLong(2,accountId);
+            deleteOperationsStatement.executeUpdate();
+
+
+            PreparedStatement deleteAccountStatement =
+                    conn.prepareStatement("delete from accounts where account_id = ? and  client_id = ?");
+            deleteAccountStatement.setLong(1,accountId);
+            deleteAccountStatement.setLong(2,clientId);
+            deleteAccountStatement.executeUpdate();
+
+        } catch (SQLException exc) {
+            System.out.println("Ошибка взаимодействия с базой данных");
+            System.err.println("Ошибка " + exc.getMessage());
+            exc.printStackTrace();
+        }
+
+        return true;
+    }
+
+    @Override
+    public Account editAccountNumber(long accountId, String number){
+        try (Connection conn = jdbcConnectionService.openConnection()) {
+            PreparedStatement updateStatement =
+                    conn.prepareStatement("update accounts set number = ? where account_id = ?");
+            updateStatement.setString(1,number);
+            updateStatement.setLong(2,accountId);
+            updateStatement.executeUpdate();
+            PreparedStatement selectStatement =
+                    conn.prepareStatement("select * from accounts where account_id = ?");
+            selectStatement.setLong(1,accountId);
+            ResultSet resultSet = selectStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return mapAccount(resultSet);
+            }
+            else {
+                System.out.println("Счет не найден");
+            }
+
+
+        } catch (SQLException exc) {
+            System.out.println("Ошибка взаимодействия с базой данных");
+            System.err.println("Ошибка " + exc.getMessage());
+            exc.printStackTrace();
+        }
+
+        return null;
+    }
+
     private Collection<Account> mapResultSet(ResultSet resultSet) throws SQLException {
         Collection<Account> accounts = new ArrayList<>();
         while (resultSet.next()) {   //возвращает boolean
@@ -96,5 +163,9 @@ public class JdbcAccountRepository implements AccountRepository {
                 currency
         );
     }
+
+
+
+
 
 }
