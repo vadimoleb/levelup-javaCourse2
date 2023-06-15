@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8422a31-7615-4678-9777-7c0de26a1b3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountDeleteAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountEditNumberAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/ApplicationRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/DatabaseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/Property.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/PropertyAnnotationProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/AnnotationApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/RandomInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/RandomIntAnnotationProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bank-system.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/menu/ConsoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/menu/ConsoleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/BankSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/BankSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -45,23 +52,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "build.tools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.levelup.bank.system.repository" />
     </key>
   </component>
   <component name="RunManager" selected="Application.BankSystemApplication">
+    <configuration name="AnnotationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.levelup.reflection.AnnotationApp" />
+      <module name="levelup-javaCourse-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.levelup.reflection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BankSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.levelup.bank.system.BankSystemApplication" />
       <module name="levelup-javaCourse-2" />
@@ -91,6 +111,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BankSystemApplication" />
+        <item itemvalue="Application.AnnotationApp" />
         <item itemvalue="Application.ReflectionApp" />
       </list>
     </recent_temporary>
@@ -111,7 +132,9 @@
       <workItem from="1685727945683" duration="3358000" />
       <workItem from="1685807143052" duration="596000" />
       <workItem from="1685869592598" duration="595000" />
-      <workItem from="1685901967103" duration="1709000" />
+      <workItem from="1685901967103" duration="2201000" />
+      <workItem from="1685909645604" duration="36000" />
+      <workItem from="1685981295379" duration="8947000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1684748780619</created>
@@ -148,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685646540778</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Edit and Delete accounts (homework)">
+      <created>1685903731090</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685903731090</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +199,7 @@
     <MESSAGE value="Create project" />
     <MESSAGE value="Jdbc lesson" />
     <MESSAGE value="Reflection lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reflection lesson" />
+    <MESSAGE value="Edit and Delete accounts (homework)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit and Delete accounts (homework)" />
   </component>
 </project>
