@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8422a31-7615-4678-9777-7c0de26a1b3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/ApplicationRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/DatabaseConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/Property.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/PropertyAnnotationProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/AnnotationApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/RandomInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/RandomIntAnnotationProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bank-system.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/HibernateConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/HbmAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcRepositoryFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/utils/Timed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/utils/TimedAnnotationInvocationHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/BankSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/BankSystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcConnectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountCreationAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountCreationAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountListingAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountListingAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/domain/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +59,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "build.tools"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -111,8 +115,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BankSystemApplication" />
-        <item itemvalue="Application.AnnotationApp" />
         <item itemvalue="Application.ReflectionApp" />
+        <item itemvalue="Application.AnnotationApp" />
       </list>
     </recent_temporary>
   </component>
@@ -135,6 +139,9 @@
       <workItem from="1685901967103" duration="2201000" />
       <workItem from="1685909645604" duration="36000" />
       <workItem from="1685981295379" duration="8947000" />
+      <workItem from="1686812185108" duration="1307000" />
+      <workItem from="1686909219004" duration="1626000" />
+      <workItem from="1687172173275" duration="8737000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1684748780619</created>
@@ -178,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685903731090</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Annotations (lesson)">
+      <created>1686812249935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686812249935</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +214,7 @@
     <MESSAGE value="Jdbc lesson" />
     <MESSAGE value="Reflection lesson" />
     <MESSAGE value="Edit and Delete accounts (homework)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit and Delete accounts (homework)" />
+    <MESSAGE value="Annotations (lesson)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Annotations (lesson)" />
   </component>
 </project>

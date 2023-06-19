@@ -1,8 +1,10 @@
 package org.levelup.bank.system.action;
 
+import org.levelup.bank.system.config.HibernateConfiguration;
 import org.levelup.bank.system.domain.Account;
 import org.levelup.bank.system.menu.ConsoleMenu;
 import org.levelup.bank.system.repository.AccountRepository;
+import org.levelup.bank.system.repository.HbmAccountRepository;
 import org.levelup.bank.system.repository.JdbcAccountRepository;
 
 public class AccountCreationAction implements ConsoleAction{
@@ -10,7 +12,9 @@ public class AccountCreationAction implements ConsoleAction{
     private final AccountRepository accountRepository;
 
     public AccountCreationAction() {
-        this.accountRepository = new JdbcAccountRepository();
+
+        //this.accountRepository = new JdbcAccountRepository();
+        this.accountRepository = new HbmAccountRepository(HibernateConfiguration.getFactory());
     }
 
     @Override

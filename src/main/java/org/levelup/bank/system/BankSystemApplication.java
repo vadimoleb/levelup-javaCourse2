@@ -5,6 +5,7 @@ import org.levelup.bank.system.action.AccountListingAction;
 import org.levelup.bank.system.action.ConsoleAction;
 import org.levelup.bank.system.action.ConsoleActionFactory;
 import org.levelup.bank.system.config.ApplicationRunner;
+import org.levelup.bank.system.config.HibernateConfiguration;
 import org.levelup.bank.system.menu.ConsoleMenu;
 
 public class BankSystemApplication {
@@ -24,6 +25,7 @@ public class BankSystemApplication {
             }
         } while (command == null || command != 0 );
 
+        HibernateConfiguration.getFactory().close();
     }
 
 

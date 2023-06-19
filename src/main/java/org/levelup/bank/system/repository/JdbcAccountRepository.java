@@ -1,6 +1,7 @@
 package org.levelup.bank.system.repository;
 
 import org.levelup.bank.system.domain.Account;
+import org.levelup.bank.system.utils.Timed;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,7 +18,7 @@ public class JdbcAccountRepository implements AccountRepository {
         this.jdbcConnectionService = new JdbcConnectionService();
     }
 
-
+    @Timed
     @Override
     public Collection<Account> findUserAccounts(long userId) {
 
@@ -156,11 +157,13 @@ public class JdbcAccountRepository implements AccountRepository {
         Long id = resultSet.getLong("account_id");
         String number = resultSet.getString("number");
         String currency = resultSet.getString("currency");
+        Long clientId = resultSet.getLong("client_id");
 
         return new Account(
                 id,
                 number,
-                currency
+                currency,
+                clientId
         );
     }
 

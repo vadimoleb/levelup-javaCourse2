@@ -3,7 +3,6 @@ package org.levelup.bank.system.action;
 import org.levelup.bank.system.domain.Account;
 import org.levelup.bank.system.menu.ConsoleMenu;
 import org.levelup.bank.system.repository.AccountRepository;
-import org.levelup.bank.system.repository.JdbcAccountRepository;
 
 import java.util.Collection;
 
@@ -11,8 +10,8 @@ public class AccountListingAction implements ConsoleAction {
 
     private final AccountRepository accountRepository;
 
-    public AccountListingAction(){
-        this.accountRepository = new JdbcAccountRepository();
+    public AccountListingAction(AccountRepository accountRepository){
+        this.accountRepository = accountRepository;
     }
 
     @Override
