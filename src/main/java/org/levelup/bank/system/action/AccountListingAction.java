@@ -18,7 +18,7 @@ public class AccountListingAction implements ConsoleAction {
     public void doAction() {
         // показать список счетов пользователей
         // получить ид пользователя
-        Long userId = ConsoleMenu.readLong("Введите идентификатор пользователя: ");
+        Integer userId = ConsoleMenu.readInteger("Введите идентификатор пользователя: ");
         if (userId == null) {
             System.out.println("Некорректный идентификатор");
             return;

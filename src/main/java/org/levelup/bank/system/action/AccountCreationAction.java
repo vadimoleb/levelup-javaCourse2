@@ -22,7 +22,7 @@ public class AccountCreationAction implements ConsoleAction{
         System.out.println("-------------");
         String number = ConsoleMenu.readString("Введите номер счета");
         String currency = ConsoleMenu.readString("Введите валюту");
-        Long clientId = ConsoleMenu.readLong("Введите идентификатор клиента");
+        Integer clientId = ConsoleMenu.readInteger("Введите идентификатор клиента");
 
         Account account = accountRepository.createAccount(number, currency, clientId);
 

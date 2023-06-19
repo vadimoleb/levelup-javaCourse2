@@ -17,6 +17,10 @@ public class ConsoleMenu {
         System.out.println("2. Открыть новый счет");
         System.out.println("3. Изменить номер счета");
         System.out.println("4. Удалить счет");
+        System.out.println("5. Вывести список пользователей");
+        System.out.println("6. Редактировать пользователя");
+        System.out.println("7. Посмотреть информацию о пользователе");
+
         System.out.println("0. Выход");
 
         System.out.println();
@@ -27,6 +31,16 @@ public class ConsoleMenu {
 
         try {
             return Long.parseLong(CONSOLE_READER.readLine());
+        } catch (Exception exc) {
+            return null;
+        }
+    }
+
+    public static Integer readInteger(String message) {
+        System.out.println(message);
+
+        try {
+            return Integer.parseInt(CONSOLE_READER.readLine());
         } catch (Exception exc) {
             return null;
         }

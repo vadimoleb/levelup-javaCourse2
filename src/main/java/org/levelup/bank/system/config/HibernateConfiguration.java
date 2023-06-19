@@ -5,6 +5,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.levelup.bank.system.domain.Account;
+import org.levelup.bank.system.domain.Client;
 import org.postgresql.Driver;
 
 import java.util.Properties;
@@ -30,7 +31,8 @@ public class HibernateConfiguration {
                 .build();
 
         Configuration configuration = new Configuration()
-                .addAnnotatedClass(Account.class);
+                .addAnnotatedClass(Account.class)
+                .addAnnotatedClass(Client.class);
         factory = configuration.buildSessionFactory(registry);
     }
 

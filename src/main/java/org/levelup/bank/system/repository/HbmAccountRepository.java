@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.levelup.bank.system.domain.Account;
+import org.levelup.bank.system.domain.Client;
 
 import java.math.BigInteger;
 import java.util.Collection;
@@ -16,18 +17,27 @@ public class HbmAccountRepository implements AccountRepository{
     private final SessionFactory factory;
 
     @Override
-    public Collection<Account> findUserAccounts(long userId) {
-        return null;
+    public Collection<Account> findUserAccounts(int userId) {
+        try (Session session = factory.openSession()){
+            //HQL . Оперируем полями классов
+            //:userId = ? только заданный userId
+            return session.createQuery("from Account where client.id = :userId", Account.class)
+                    .setParameter("userId", userId)
+                    .getResultList();
+        }
+
     }
 
     @Override
-    public Account createAccount(String number, String currency, long clientId) {
+    public Account createAccount(String number, String currency, int clientId) {
         try (Session session = factory.openSession()){
             Transaction tx = session.beginTransaction();
             Long maxAccountId = ((BigInteger)session
                     .createNativeQuery("select max(account_id) from accounts")
                     .getSingleResult()).longValue();
-            Account account = new Account(maxAccountId + 1, number,currency, clientId);
+
+            Client client = session.load(Client.class,clientId);
+            Account account = new Account(maxAccountId + 1, number,currency, client);
             //создание записи
             session.persist(account);
 

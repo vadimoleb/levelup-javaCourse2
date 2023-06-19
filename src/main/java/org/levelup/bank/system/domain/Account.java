@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @AllArgsConstructor
@@ -25,7 +22,8 @@ public class Account {
     @Column(name = "currency")
     private String currency;
 
-    @Column(name = "client_id")
-    private Long clientId;
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
 
 }

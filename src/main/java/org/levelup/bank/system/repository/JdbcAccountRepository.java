@@ -1,6 +1,7 @@
 package org.levelup.bank.system.repository;
 
 import org.levelup.bank.system.domain.Account;
+import org.levelup.bank.system.domain.Client;
 import org.levelup.bank.system.utils.Timed;
 
 import java.sql.Connection;
@@ -20,11 +21,14 @@ public class JdbcAccountRepository implements AccountRepository {
 
     @Timed
     @Override
-    public Collection<Account> findUserAccounts(long userId) {
+    public Collection<Account> findUserAccounts(int userId) {
 
         try (Connection conn = jdbcConnectionService.openConnection()) {
             // Statement <- PreparedStatement <- CallableStatement
-            PreparedStatement statement = conn.prepareStatement("select * from accounts where client_id = ?");
+            String sql = "select * from accounts a " +
+                    "join clients c on c.clients_id = a.clients_id" +
+                    " where a.client_id = ?";
+            PreparedStatement statement = conn.prepareStatement(sql);
             statement.setLong(1, userId);
 
 
@@ -44,7 +48,7 @@ public class JdbcAccountRepository implements AccountRepository {
     }
 
     @Override
-    public Account createAccount(String number, String currency, long clientId) {
+    public Account createAccount(String number, String currency, int clientId) {
         try (Connection conn = jdbcConnectionService.openConnection()) {
             PreparedStatement findMaxAccountIdStatement =
                     conn.prepareStatement("select max(account_id) from accounts");
@@ -60,9 +64,13 @@ public class JdbcAccountRepository implements AccountRepository {
             insertStatement.setLong(4,clientId);
 
             insertStatement.executeUpdate();
+
+            String sql = "select * from accounts a " +
+                    "join clients c on c.clients_id = a.clients_id" +
+                    " where a.client_id = ?";
             //возвращаем полученную строку, т.к инсерт не возвращает это
             PreparedStatement selectStatement =
-                    conn.prepareStatement("select * from accounts where account_id = ?");
+                    conn.prepareStatement(sql);
             selectStatement.setLong(1,account_id);
             ResultSet resultSet = selectStatement.executeQuery();
             resultSet.next();
@@ -157,13 +165,16 @@ public class JdbcAccountRepository implements AccountRepository {
         Long id = resultSet.getLong("account_id");
         String number = resultSet.getString("number");
         String currency = resultSet.getString("currency");
-        Long clientId = resultSet.getLong("client_id");
+        Integer clientId = resultSet.getInt("a.client_id");
+        String fio = resultSet.getString("fio");
+        String phone = resultSet.getString("phone");
 
+        Client client = new Client(clientId,fio,phone);
         return new Account(
                 id,
                 number,
                 currency,
-                clientId
+                client
         );
     }
 
