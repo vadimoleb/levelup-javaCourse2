@@ -1,5 +1,8 @@
 package org.levelup.reflection;
 
+import lombok.Getter;
+
+@Getter
 public class Point {
 
     @RandomInt(min = 10, max = 30)

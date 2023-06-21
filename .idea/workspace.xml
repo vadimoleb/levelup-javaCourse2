@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8422a31-7615-4678-9777-7c0de26a1b3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ClientDetailAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ClientEditAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ClientListingAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/domain/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/HbmClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/levelup/reflection/PointTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountCreationAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountCreationAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountListingAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/AccountListingAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/action/ConsoleActionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/HibernateConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/HibernateConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/domain/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/menu/ConsoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/menu/ConsoleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/HbmAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/HbmAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/JdbcRepositoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/repository/RepositoryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/reflection/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +21,7 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,6 +50,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -72,8 +62,14 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.levelup.bank.system.repository" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.levelup.reflection" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.BankSystemApplication">
+  <component name="RunManager" selected="JUnit.PointTest.shouldInvokePointConstructorWithOneXParameter">
     <configuration name="AnnotationApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.levelup.reflection.AnnotationApp" />
       <module name="levelup-javaCourse-2" />
@@ -113,8 +109,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PointTest.shouldInvokePointConstructorWithOneXParameter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="levelup-javaCourse-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.levelup.reflection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.levelup.reflection" />
+      <option name="MAIN_CLASS_NAME" value="org.levelup.reflection.PointTest" />
+      <option name="METHOD_NAME" value="shouldInvokePointConstructorWithOneXParameter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PointTest.shouldInvokePointConstructorWithOneXParameter" />
         <item itemvalue="Application.BankSystemApplication" />
         <item itemvalue="Application.ReflectionApp" />
         <item itemvalue="Application.AnnotationApp" />
@@ -143,6 +156,7 @@
       <workItem from="1686812185108" duration="1307000" />
       <workItem from="1686909219004" duration="1626000" />
       <workItem from="1687172173275" duration="15241000" />
+      <workItem from="1687190731421" duration="4435000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1684748780619</created>
@@ -200,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687181273713</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Hibernate (lesson 8)">
+      <created>1687190825255</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687190825255</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +245,7 @@
     <MESSAGE value="Edit and Delete accounts (homework)" />
     <MESSAGE value="Annotations (lesson)" />
     <MESSAGE value="Hibernate (lesson 7)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate (lesson 7)" />
+    <MESSAGE value="Hibernate (lesson 8)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate (lesson 8)" />
   </component>
 </project>
