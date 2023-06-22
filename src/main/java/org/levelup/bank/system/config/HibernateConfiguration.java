@@ -25,7 +25,7 @@ public class HibernateConfiguration {
         dbProperties.setProperty("hibernate.format_sql", "true");
 
         //чо делать со схемой. в данном случае - валидация полей, которые используются по коду
-        dbProperties.setProperty("hibernate.hbm2ddl.auto", "validate");
+        dbProperties.setProperty("hibernate.hbm2ddl.auto", dbConfig.getSchemaManagement());
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(dbProperties)
                 .build();
