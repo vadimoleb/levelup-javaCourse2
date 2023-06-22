@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8422a31-7615-4678-9777-7c0de26a1b3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/levelup/bank/system/repository/HbmClientRepositoryIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/lambda/LambdaExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/lambda/StringLengthPredicate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/DatabaseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/DatabaseConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/HibernateConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/bank/system/config/HibernateConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/levelup/reflection/PointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/levelup/reflection/PointTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,20 @@
       <recent name="org.levelup.reflection" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HbmClientRepositoryIT">
+  <component name="RunManager" selected="Application.LambdaExample">
+    <configuration name="LambdaExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.levelup.lambda.LambdaExample" />
+      <module name="levelup-javaCourse-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.levelup.lambda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RectangleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.levelup.reflection.RectangleApp" />
       <module name="levelup-javaCourse-2" />
@@ -131,29 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PointTest.shouldInvokePointConstructorWithOneXParameter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="levelup-javaCourse-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.levelup.reflection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.levelup.reflection" />
-      <option name="MAIN_CLASS_NAME" value="org.levelup.reflection.PointTest" />
-      <option name="METHOD_NAME" value="shouldInvokePointConstructorWithOneXParameter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LambdaExample" />
         <item itemvalue="JUnit.HbmClientRepositoryIT" />
         <item itemvalue="JUnit.HbmClientRepositoryIT.shouldFindAllClients" />
         <item itemvalue="JUnit.HbmClientRepositoryIT.shouldReturnExistingClientByClientId" />
         <item itemvalue="Application.RectangleApp" />
-        <item itemvalue="JUnit.PointTest.shouldInvokePointConstructorWithOneXParameter" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +176,7 @@
       <workItem from="1687172173275" duration="15241000" />
       <workItem from="1687190731421" duration="4435000" />
       <workItem from="1687373846619" duration="2767000" />
-      <workItem from="1687449200492" duration="3502000" />
+      <workItem from="1687449200492" duration="5794000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1684748780619</created>
@@ -260,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687376395379</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Integration test. Half of 10 Lesson">
+      <created>1687453683479</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687453683479</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +289,7 @@
     <MESSAGE value="Hibernate (lesson 8)" />
     <MESSAGE value="Junit (lesson 9) half" />
     <MESSAGE value="Rectangle. Reflection homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rectangle. Reflection homework" />
+    <MESSAGE value="Integration test. Half of 10 Lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration test. Half of 10 Lesson" />
   </component>
 </project>
