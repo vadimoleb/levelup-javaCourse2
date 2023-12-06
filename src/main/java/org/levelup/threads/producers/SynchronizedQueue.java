@@ -50,4 +50,10 @@ public class SynchronizedQueue<T> implements Queue<T> {
            return task;
         }
     }
+
+    public int size(){
+        synchronized (readMutex){
+            return queue.size();
+        }
+    }
 }

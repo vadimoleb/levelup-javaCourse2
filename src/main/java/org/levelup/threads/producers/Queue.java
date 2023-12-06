@@ -5,4 +5,7 @@ public interface Queue<T> {
     void putTask(T task) throws InterruptedException;
 
     T takeTask() throws InterruptedException;
+
+
+    int size();
 }

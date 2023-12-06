@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8422a31-7615-4678-9777-7c0de26a1b3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/CounterThreads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Converter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Downloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/QueueApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/SynchronizedQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/ThreadInterruption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/SynchronizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/levelup/threads/producers/SynchronizedQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <recent name="org.levelup.reflection" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QueueApp">
+  <component name="RunManager" selected="Application.ThreadInterruption">
     <configuration name="CounterThreads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.levelup.threads.CounterThreads" />
       <module name="levelup-javaCourse-2" />
@@ -112,6 +110,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadInterruption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.levelup.threads.ThreadInterruption" />
+      <module name="levelup-javaCourse-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.levelup.threads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ThreadsExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.levelup.threads.ThreadsExample" />
       <module name="levelup-javaCourse-2" />
@@ -125,28 +136,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HbmClientRepositoryIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="levelup-javaCourse-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.levelup.bank.system.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.levelup.bank.system.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.levelup.bank.system.repository.HbmClientRepositoryIT" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadInterruption" />
         <item itemvalue="Application.QueueApp" />
         <item itemvalue="Application.CounterThreads" />
         <item itemvalue="Application.ThreadsExample" />
         <item itemvalue="Application.LambdaExample" />
-        <item itemvalue="JUnit.HbmClientRepositoryIT" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +171,8 @@
       <workItem from="1687190731421" duration="4435000" />
       <workItem from="1687373846619" duration="2767000" />
       <workItem from="1687449200492" duration="9692000" />
-      <workItem from="1687795423716" duration="9302000" />
+      <workItem from="1687795423716" duration="9325000" />
+      <workItem from="1688054335981" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1684748780619</created>
@@ -275,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687460995598</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Lesson 11 Threads">
+      <created>1687808385270</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1687808385270</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +309,7 @@
     <MESSAGE value="Integration test. Half of 10 Lesson" />
     <MESSAGE value="Lambda/ Lesson10" />
     <MESSAGE value="Lesson 10 Threads" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 10 Threads" />
+    <MESSAGE value="Lesson 11 Threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 11 Threads" />
   </component>
 </project>
